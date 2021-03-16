@@ -29,7 +29,7 @@ public class Boss implements IBoss {
     }
 
     @Override
-    public void decreaseLvl(int diff) {
+    public synchronized void decreaseLvl(int diff) {
         System.out.println("Decreased level from " + lvl + " to " + (lvl - diff));
         lvl -= diff;
     }
